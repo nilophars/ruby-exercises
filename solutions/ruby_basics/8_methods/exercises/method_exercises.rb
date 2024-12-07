@@ -10,6 +10,7 @@ def ascii_translator(number)
   number.chr
 end
 
+
 # method name: #common_sports
 # parameters: current_sports and favorite_sports (both arrays)
 # return value: an array containing items in both arrays
@@ -21,10 +22,11 @@ end
 # method name: #alphabetical_list
 # parameter: games (an array)
 # return value: games, alphabetically sorted and duplicates removed
-# hint: chain Array#uniq and Array#sort together
+# hint: chain Array#sort and Array#uniq together
 def alphabetical_list(games)
-  games.uniq.sort
+  games.sort.uniq
 end
+
 
 # method name: #lucky_number
 # parameter: number (an integer) with default value of 7
@@ -33,15 +35,20 @@ def lucky_number(number = 7)
   "Today's lucky number is #{number}"
 end
 
+
 # method name: #ascii_code
 # parameter: character (a string)
 # return value: the character's ordinal number
 # explicit return value: 'Input Error' if character's length does not equal 1
 # hint: use String#ord
 def ascii_code(character)
-  return 'Input Error' if character.length != 1
+  unless character.length == 1
+    return "Input Error"
+  end
+
   character.ord
 end
+
 
 # method name: #pet_pun
 # parameter: animal (a string)
@@ -53,12 +60,13 @@ end
 def pet_pun(animal)
   if animal == 'cat'
     puts 'Cats are purr-fect!'
-  elsif animal =='dog'
+  elsif animal == 'dog'
     puts 'Dogs are paw-some!'
   else
     puts "I think #{animal}s have pet-tential!"
   end
 end
+
 
 # method name: #twenty_first_century?
 # parameter: year (an integer)
